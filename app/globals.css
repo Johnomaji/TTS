@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+body {
+  background-color: #09090b;
+  color: #f4f4f5;
+}
+
+@keyframes wave-bar {
+  0%, 100% { transform: scaleY(0.25); }
+  50% { transform: scaleY(1); }
+}
+
+.animate-wave {
+  animation: wave-bar 0.75s ease-in-out infinite;
+}
+
+/* Range slider */
+input[type="range"] {
+  appearance: none;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: #3f3f46;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: #7c3aed;
+  cursor: pointer;
+  margin-top: -6px;
+  transition: background 0.15s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #8b5cf6;
+}
+
+input[type="range"]:disabled::-webkit-slider-thumb {
+  background: #52525b;
+  cursor: not-allowed;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: #3f3f46;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: #7c3aed;
+  cursor: pointer;
+  border: none;
+  transition: background 0.15s;
+}
